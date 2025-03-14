@@ -1,0 +1,27 @@
+#include <iostream>
+#include "student.h"
+
+
+
+// Accessors
+std::string Student::getStudentID() { return studentID; }
+std::string Student::getFirstName() { return firstName; }
+std::string Student::getLastName() { return lastName; }
+std::string Student::getEmailAddress() { return emailAddress; }
+int Student::getAge() { return age; }
+int* Student::getDaysInCourse() { return daysInCourse; }
+DegreeProgram Student::getDegreeProgram() { return degreeProgram; }
+
+// Mutators
+void Student::setStudentID(std::string studentID) { this->studentID = studentID; }
+void Student::setFirstName(std::string firstName) { this->firstName = firstName; }
+void Student::setLastName(std::string lastName) { this->lastName = lastName; }
+void Student::setEmailAddress(std::string emailAddress) { this->emailAddress = emailAddress; }
+void Student::setAge(int age) { this->age = age; }
+void Student::setDaysInCourse(int daysInCourse[]) {
+    for (int i = 0; i < 3; i++) {
+        this->daysInCourse[i] = daysInCourse[i];
+    }
+}
+void Student::setDegreeProgram(DegreeProgram degreeProgram) { this->degreeProgram = degreeProgram; }
+
