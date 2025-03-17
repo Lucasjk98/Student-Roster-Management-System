@@ -50,3 +50,12 @@ void Roster::printAverageDaysInCourse(std::string studentID) {
     }
     std::cout << "Student with ID " << studentID << " not found." << std::endl;
 }
+
+void Roster::printInvalidEmails() {
+    for (int i = 0; i <= lastIndex; i++) {
+        std::string email = classRosterArray[i]->getEmailAddress();
+        if (email.find('@') == std::string::npos || email.find('.') == std::string::npos || email.find(' ') != std::string::npos) {
+            std::cout << "Invalid email: " << email << std::endl;
+        }
+    }
+}
