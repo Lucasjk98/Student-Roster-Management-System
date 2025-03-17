@@ -39,3 +39,14 @@ void Roster::printAll() {
         classRosterArray[i]->print();
     }
 }
+
+void Roster::printAverageDaysInCourse(std::string studentID) {
+    for (int i = 0; i <= lastIndex; i++) {
+        if (classRosterArray[i]->getStudentID() == studentID) {
+            int* days = classRosterArray[i]->getDaysInCourse();
+            std::cout << "Average days in course for student " << studentID << ": " << (days[0] + days[1] + days[2]) / 3 << std::endl;
+            return;
+        }
+    }
+    std::cout << "Student with ID " << studentID << " not found." << std::endl;
+}
