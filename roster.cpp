@@ -18,3 +18,18 @@ void Roster::add(std::string studentID, std::string firstName, std::string lastN
     lastIndex++;
     classRosterArray[lastIndex] = new Student(studentID, firstName, lastName, emailAddress, age, daysInCourse1, daysInCourse2, daysInCourse3, degreeProgram);
 }
+
+void Roster::remove(std::string studentID) {
+    bool found = false;
+    for (int i = 0; i <= lastIndex; i++) {
+        if (classRosterArray[i]->getStudentID() == studentID) {
+            found = true;
+            delete classRosterArray[i];
+            classRosterArray[i] = classRosterArray[lastIndex];
+            lastIndex--;
+        }
+    }
+    if (!found) {
+        std::cout << "Student with ID " << studentID << " not found." << std::endl;
+    }
+}
