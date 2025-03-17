@@ -33,3 +33,9 @@ void Roster::remove(std::string studentID) {
         std::cout << "Student with ID " << studentID << " not found." << std::endl;
     }
 }
+
+void Roster::printAll() {
+    for (int i = 0; i <= lastIndex; i++) {
+        classRosterArray[i]->print();
+    }
+}
