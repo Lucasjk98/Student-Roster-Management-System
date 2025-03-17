@@ -36,3 +36,15 @@ for (int i = 0; i < 5; i++) {
 
     return 0;
 }
+
+classRoster.printAll();
+classRoster.printInvalidEmails();
+
+for (int i = 0; i < 5; i++) {
+    classRoster.printAverageDaysInCourse(classRoster.getClassRosterArray()[i]->getStudentID());
+}
+
+classRoster.printByDegreeProgram(SOFTWARE);
+classRoster.remove("A3");
+classRoster.printAll();
+classRoster.remove("A3");
