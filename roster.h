@@ -1,3 +1,4 @@
+// roster.h
 #ifndef ROSTER_H
 #define ROSTER_H
 
@@ -18,6 +19,9 @@ public:
     void printAverageDaysInCourse(std::string studentID);
     void printInvalidEmails();
     void printByDegreeProgram(DegreeProgram degreeProgram);
+
+    // Function to get the class roster array
+    Student** getClassRosterArray();
 };
 
 #endif

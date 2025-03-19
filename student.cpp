@@ -1,3 +1,4 @@
+// student.cpp
 #include <iostream>
 #include "student.h"
 
@@ -36,7 +37,7 @@ void Student::setDaysInCourse(int daysInCourse[]) {
 }
 void Student::setDegreeProgram(DegreeProgram degreeProgram) { this->degreeProgram = degreeProgram; }
 
-// Print function
+// Print student data
 void Student::print() {
     std::cout << studentID << "\t";
     std::cout << "First Name: " << firstName << "\t";
@@ -48,6 +49,8 @@ void Student::print() {
         case SECURITY: std::cout << "Security"; break;
         case NETWORK: std::cout << "Network"; break;
         case SOFTWARE: std::cout << "Software"; break;
+        default: std::cout << "Unknown"; break;
     }
     std::cout << std::endl;
 }
+       
